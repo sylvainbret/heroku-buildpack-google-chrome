@@ -109,10 +109,7 @@ fi
 
 topic "Installing Google Chrome from the $channel channel."
 
-curl -L https://github.com/Ottermad/heroku-buildpack-google-chrome/raw/master/google-chrome-stable_current_amd64.deb -o chrome.deb
-dpkg -I chrome.deb
-
-PACKAGES="$PACKAGES https://dl.google.com/linux/direct/google-chrome-${channel}_current_amd64.deb"
+PACKAGES="$PACKAGES https://github.com/Ottermad/heroku-buildpack-google-chrome/raw/master/google-chrome-stable_current_amd64.deb"
 
 APT_CACHE_DIR="$CACHE_DIR/apt/cache"
 APT_STATE_DIR="$CACHE_DIR/apt/state"
